@@ -10,6 +10,7 @@ module.exports = {
         "primary-storm": "#5B6D89",
         "primary-shadow": "#8A99B1",
         "primary-fog": "#C0CAD9",
+        "primary-cloud": "#F5F5F5",
       },
       fontSize: {
         xxl: "3.375 rem",
