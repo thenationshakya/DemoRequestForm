@@ -1,16 +1,23 @@
 import "./styles/App.scss";
 
 // components
-import Layout from "./components/Layout";
-import QuestionLayout from "./components/QuestionLayout";
+import {
+  NavButtonsLayout,
+  QuestionLayout,
+  MainLayout,
+} from "./components/Layouts";
 
 function App() {
   return (
-    <Layout>
+    <MainLayout>
       <QuestionLayout title="Title Question" subtitle="subtitle">
         <h1>Hello</h1>
       </QuestionLayout>
-    </Layout>
+      <NavButtonsLayout
+        onBack={() => console.log("OnBack")}
+        onContinue={() => console.log("onContinue")}
+      />
+    </MainLayout>
   );
 }
 
