@@ -60,11 +60,11 @@ function App() {
   };
 
   return (
-    <MainLayout>
-      <PageContext.Provider value={{ page, setPage }}>
+    <PageContext.Provider value={{ page, setPage }}>
+      <MainLayout>
         <ScreenRender />
-      </PageContext.Provider>
-    </MainLayout>
+      </MainLayout>
+    </PageContext.Provider>
   );
 }
 
