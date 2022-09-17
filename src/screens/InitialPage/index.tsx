@@ -1,6 +1,11 @@
 import Button from "../../components/Button";
 
+// context
+import { usePageState } from "../../context/pages.context";
+
 const InitialPage = () => {
+  const { setPage } = usePageState();
+
   return (
     <>
       <h1 className="text-xxl font-semibold text-primary-midnight max-w-[715px]  leading-[1.18]">
@@ -15,7 +20,7 @@ const InitialPage = () => {
       </h2>
       <Button
         buttonText="Continue"
-        onClick={() => console.log("onClick")}
+        onClick={() => setPage((page) => page + 1)}
         containerStyle={"text-center min-w-[172px]"}
       />
     </>
