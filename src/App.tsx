@@ -16,9 +16,11 @@ import AppLinks from "./screens/AppLinks";
 import Analytics from "./screens/Analytics";
 import Improvements from "./screens/Improvements";
 import ContactEmail from "./screens/ContactEmail";
-import { PageContext } from "./context/pages.context";
 import MonthlySessions from "./screens/MonthlySessions";
 import SurveyCompletion from "./screens/SurveyCompletion";
+
+// context
+import { PageContext } from "./context/pages.context";
 
 function App() {
   const [page, setPage] = useState(0);

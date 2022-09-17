@@ -1,0 +1,55 @@
+{
+  "id": 2,
+  "questionType": "radio",
+  "title": "What framework is your app developed on?",
+  "options": [
+    {
+      "id": 1,
+      "value": "iOS"
+    },
+    {
+      "id": 2,
+      "value": "Android"
+    },
+    {
+      "id": 3,
+      "value": "Ionic"
+    },
+    {
+      "id": 4,
+      "value": "Android"
+    },
+    {
+      "id": 5,
+      "value": "Android"
+    },
+    {
+      "id": 6,
+      "value": "Android"
+    },
+    {
+      "id": 7,
+      "value": "Android"
+    },
+    {
+      "id": 8,
+      "value": "Android"
+    },
+    {
+      "id": 9,
+      "value": "Android"
+    },
+    {
+      "id": 10,
+      "value": "Android"
+    },
+    {
+      "id": 11,
+      "value": "Android"
+    },
+    {
+      "id": 12,
+      "value": "Android"
+    }
+  ]
+}

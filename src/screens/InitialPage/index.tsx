@@ -1,22 +1,34 @@
+// components
 import Button from "../../components/Button";
+import SpinLoader from "../../components/SpinLoader";
 
-// context
+// hooks
+import useFetch from "../../hooks/useFetch";
 import { usePageState } from "../../context/pages.context";
 
 const InitialPage = () => {
   const { setPage } = usePageState();
 
+  const { response, isLoading, error } = useFetch("initial-page");
+
+  if (error) {
+    return <p>Error while fetching data. Please try again later.</p>;
+  }
+
+  if (isLoading) {
+    return <SpinLoader />;
+  }
+
   return (
     <>
       <h1 className="text-xxl font-semibold text-primary-midnight max-w-[715px]  leading-[1.18]">
-        Thank you for requesting a UXCam quote.
+        {response?.title}
       </h1>
       <p className="mt-6 mb-12 roboto text-primary-midnight text-md">
-        Just one more thing before you go:
+        {response?.subtitle}
       </p>
       <h2 className="mb-16 text-xl font-semibold leading-snug text-primary-sky">
-        To help us tailor a plan to your needs, please answer the following
-        questions. It will only take 2 minutes!
+        {response?.message}
       </h2>
       <Button
         buttonText="Continue"
