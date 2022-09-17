@@ -1,17 +1,18 @@
 import "./styles/App.scss";
 
 // components
+import Layout from "./Layout";
 import Button from "./components/Button";
 
 function App() {
   return (
-    <div className="text-purple-500">
+    <Layout>
       <Button
         onClick={() => console.log("Button clicked")}
         buttonText="Continue"
         buttonType="outline"
       />
-    </div>
+    </Layout>
   );
 }
 
