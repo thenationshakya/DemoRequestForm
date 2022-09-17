@@ -1,17 +1,15 @@
 import "./styles/App.scss";
 
 // components
-import Layout from "./Layout";
-import Button from "./components/Button";
+import Layout from "./components/Layout";
+import QuestionLayout from "./components/QuestionLayout";
 
 function App() {
   return (
     <Layout>
-      <Button
-        onClick={() => console.log("Button clicked")}
-        buttonText="Continue"
-        buttonType="outline"
-      />
+      <QuestionLayout title="Title Question" subtitle="subtitle">
+        <h1>Hello</h1>
+      </QuestionLayout>
     </Layout>
   );
 }
