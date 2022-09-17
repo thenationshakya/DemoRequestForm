@@ -13,12 +13,13 @@ module.exports = {
         "primary-cloud": "#F5F5F5",
       },
       fontSize: {
-        xxl: "3.375rem",
-        xl: "2.625rem",
-        lg: "1.5rem",
-        md: "1.125rem",
-        sm: "0.875rem",
-        xs: "0.75rem",
+        xxxl: "3.375rem", // 54px
+        xxl: "2.625rem", // 42px
+        xl: "2rem", //32px
+        lg: "1.5rem", //24px
+        md: "1.125rem", //18px
+        sm: "0.875rem", //14px
+        xs: "0.75rem", //12px
       },
     },
   },

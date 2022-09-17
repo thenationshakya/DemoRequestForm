@@ -7,16 +7,17 @@ import {
   MainLayout,
 } from "./components/Layouts";
 
+// screens
+import InitialPage from "./screens/InitialPage";
+
 function App() {
   return (
     <MainLayout>
-      <QuestionLayout title="Title Question" subtitle="subtitle">
-        <h1>Hello</h1>
-      </QuestionLayout>
-      <NavButtonsLayout
+      <InitialPage />
+      {/* <NavButtonsLayout
         onBack={() => console.log("OnBack")}
         onContinue={() => console.log("onContinue")}
-      />
+      /> */}
     </MainLayout>
   );
 }

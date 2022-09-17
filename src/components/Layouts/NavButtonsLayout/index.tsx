@@ -4,7 +4,11 @@ import Button from "../../Button";
 // types
 import { NavButtonsLayoutProps } from "./types";
 
-const NavButtonsLayout = ({ onBack, onContinue }: NavButtonsLayoutProps) => {
+const NavButtonsLayout = ({
+  onBack,
+  onContinue,
+  continueDisabled,
+}: NavButtonsLayoutProps) => {
   return (
     <div className="flex justify-between gap-2 w-full max-w-[690px] mx-auto mt-[50px]">
       <Button
@@ -18,6 +22,7 @@ const NavButtonsLayout = ({ onBack, onContinue }: NavButtonsLayoutProps) => {
         buttonType="solid"
         onClick={onContinue}
         containerStyle={"text-xs"}
+        disabled={continueDisabled}
       />
     </div>
   );
