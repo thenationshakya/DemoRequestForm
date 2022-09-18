@@ -1,0 +1,15 @@
+{
+  "title": "How many monthly sessions does each app receive?",
+  "subtitle": "A session is every time a user opens the app, uses it, and when they put the app into the background, the session ends.",
+  "options": [
+    {
+      "option": "01 - 49"
+    },
+    {
+      "option": "50 - 100"
+    },
+    {
+      "option": "101 - 200"
+    }
+  ]
+}

@@ -1,0 +1,7 @@
+{
+  "title": "Primary contact email",
+  "input": {
+    "name": "contact_email",
+    "placeholder": "name@company.com"
+  }
+}

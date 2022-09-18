@@ -1,0 +1,39 @@
+{
+  "title": "What areas of your app are you looking to improve with UXCam?",
+  "subtitle": "Please select all that apply",
+  "options": [
+    {
+      "value": "Improve overall UX"
+    },
+    {
+      "value": "Increase feature adoption"
+    },
+    {
+      "value": "Increase app retention"
+    },
+    {
+      "value": "Improve onboarding experience"
+    },
+    {
+      "value": "Increase key conversions"
+    },
+    {
+      "value": "Understand in-app user journeys"
+    },
+    {
+      "value": "Improve app store rating & NPS"
+    },
+    {
+      "value": "Incorporate UX feedback into product research and development"
+    },
+    {
+      "value": "Support Customer Success and Engineering teams in resolving bugs & crashes"
+    },
+    {
+      "value": "Other (please specify at the bottom of the form)"
+    },
+    {
+      "value": "Capture qualitative insights and understand why users drop-off"
+    }
+  ]
+}

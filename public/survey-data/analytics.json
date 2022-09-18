@@ -1,0 +1,51 @@
+{
+  "title": "What analytics tools are you currently using with your app?",
+  "subtitle": "Please select all that apply",
+  "options": [
+    {
+      "option": "Google Analytics"
+    },
+    {
+      "option": "Firebase"
+    },
+    {
+      "option": "Adobe"
+    },
+    {
+      "option": "Mixpanel"
+    },
+    {
+      "option": "Amplitude"
+    },
+    {
+      "option": "Clever Tap"
+    },
+    {
+      "option": "Segment"
+    },
+    {
+      "option": "Instabug"
+    },
+    {
+      "option": "Appsflyer"
+    },
+    {
+      "option": "Branch"
+    },
+    {
+      "option": "Adjust"
+    },
+    {
+      "option": "Sentry"
+    },
+    {
+      "option": "Flurry"
+    },
+    {
+      "option": "Others"
+    },
+    {
+      "option": "No Analytics"
+    }
+  ]
+}

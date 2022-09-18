@@ -1,0 +1,8 @@
+{
+  "title": "App links",
+  "subtitle": "Please include a Google Play Store or App Store link to your app (if available) ",
+  "input": {
+    "name": "app_link",
+    "placeholder": "Insert App link here"
+  }
+}

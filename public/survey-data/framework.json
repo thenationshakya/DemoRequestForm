@@ -1,55 +1,41 @@
 {
-  "id": 2,
-  "questionType": "radio",
   "title": "What framework is your app developed on?",
   "options": [
     {
-      "id": 1,
       "value": "iOS"
     },
     {
-      "id": 2,
       "value": "Android"
     },
     {
-      "id": 3,
       "value": "Ionic"
     },
     {
-      "id": 4,
-      "value": "Android"
+      "value": "Cordova"
     },
     {
-      "id": 5,
-      "value": "Android"
+      "value": "Flutter"
     },
     {
-      "id": 6,
-      "value": "Android"
+      "value": "Unity"
     },
     {
-      "id": 7,
-      "value": "Android"
+      "value": "React Native"
     },
     {
-      "id": 8,
-      "value": "Android"
+      "value": "Xamarin"
     },
     {
-      "id": 9,
-      "value": "Android"
+      "value": "Xamarin.forms"
     },
     {
-      "id": 10,
-      "value": "Android"
+      "value": "Expo"
     },
     {
-      "id": 11,
-      "value": "Android"
+      "value": "NativeScript"
     },
     {
-      "id": 12,
-      "value": "Android"
+      "value": "Other"
     }
   ]
 }
