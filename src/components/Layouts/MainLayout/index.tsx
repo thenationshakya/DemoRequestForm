@@ -37,7 +37,7 @@ const MainLayout = ({ children }: MainLayoutProps) => {
       <div
         className={`${calculateProgress()} absolute top-0 left-0 h-3 bg-primary-sky transition-all`}
       />
-      <div className="max-w-[940px] mx-auto px-5 text-center flex flex-col justify-center items-center">
+      <div className="max-w-[1100px] mx-auto px-5 text-center flex flex-col justify-center items-center">
         <img
           src={require("../../../assets/logo.png")}
           alt="Site Logo"

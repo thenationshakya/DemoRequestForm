@@ -2,10 +2,12 @@
   "title": "Please select one",
   "options": [
     {
-      "value": "iOS"
+      "value": "iOS",
+      "src": "apple.png"
     },
     {
-      "value": "Android"
+      "value": "Android",
+      "src": "android.png"
     }
   ]
 }

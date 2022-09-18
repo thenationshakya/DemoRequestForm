@@ -1,6 +1,7 @@
 export type QuestionLayoutProps = {
   children?: React.ReactNode;
-  title: string;
+  title?: string;
   subtitle?: string;
   disablePageCount?: boolean;
+  titleStyles?: string;
 };

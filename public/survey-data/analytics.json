@@ -3,49 +3,64 @@
   "subtitle": "Please select all that apply",
   "options": [
     {
-      "option": "Google Analytics"
+      "value": "Google Analytics",
+      "src": "google-analytics.png"
     },
     {
-      "option": "Firebase"
+      "value": "Firebase",
+      "src": "firebase.png"
     },
     {
-      "option": "Adobe"
+      "value": "Adobe",
+      "src": "adobe.png"
     },
     {
-      "option": "Mixpanel"
+      "value": "Mixpanel",
+      "src": "mixpanel.png"
     },
     {
-      "option": "Amplitude"
+      "value": "Amplitude",
+      "src": "amplitude.png"
     },
     {
-      "option": "Clever Tap"
+      "value": "Clever Tap",
+      "src": "clevertap.webp"
     },
     {
-      "option": "Segment"
+      "value": "Segment",
+      "src": "segment.png"
     },
     {
-      "option": "Instabug"
+      "value": "Instabug",
+      "src": "instabug.png"
     },
     {
-      "option": "Appsflyer"
+      "value": "Appsflyer",
+      "src": "appsflyer.png"
     },
     {
-      "option": "Branch"
+      "value": "Branch",
+      "src": "branch.png"
     },
     {
-      "option": "Adjust"
+      "value": "Adjust",
+      "src": "adjust.png"
     },
     {
-      "option": "Sentry"
+      "value": "Sentry",
+      "src": "sentry.png"
     },
     {
-      "option": "Flurry"
+      "value": "Flurry",
+      "src": "flurry.png"
     },
     {
-      "option": "Others"
+      "value": "Others",
+      "src": "others.png"
     },
     {
-      "option": "No Analytics"
+      "value": "No Analytics",
+      "src": "no-analytics.png"
     }
   ]
 }

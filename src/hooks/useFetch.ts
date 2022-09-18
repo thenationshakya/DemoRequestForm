@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 
-const useFetch = (fileName: string) => {
-  const [response, setResponse] = useState<any>(null);
+const useFetch = <T>(fileName: string) => {
+  const [response, setResponse] = useState<T | null>(null);
   const [error, setError] = useState(null);
   const [isLoading, setIsLoading] = useState(false);
 

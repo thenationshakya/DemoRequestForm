@@ -6,10 +6,14 @@ import SpinLoader from "components/SpinLoader";
 import useFetch from "hooks/useFetch";
 import { usePageState } from "context/pages.context";
 
+// types
+import { InitialPageResponse } from "./types";
+
 const InitialPage = () => {
   const { setPage } = usePageState();
 
-  const { response, isLoading, error } = useFetch("initial-page");
+  const { response, isLoading, error } =
+    useFetch<InitialPageResponse>("initial-page");
 
   if (error) {
     return <p>Error while fetching data. Please try again later.</p>;

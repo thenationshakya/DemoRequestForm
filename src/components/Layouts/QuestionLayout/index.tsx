@@ -9,6 +9,7 @@ const QuestionLayout = ({
   title,
   subtitle,
   disablePageCount,
+  titleStyles,
 }: QuestionLayoutProps) => {
   const { page } = usePageState();
 
@@ -19,11 +20,17 @@ const QuestionLayout = ({
           {`QUESTION ${page}/7`}
         </h6>
       )}
-      <h2 className="text-xl font-semibold text-primary-midnight max-w-[715px]  leading-[1.18]">
-        {title}
-      </h2>
+      {title && (
+        <h2
+          className={`text-xl font-semibold text-primary-midnight max-w-[715px]  leading-[1.18] ${titleStyles}`}
+        >
+          {title}
+        </h2>
+      )}
       {subtitle && (
-        <p className="mb-12 text-md text-primary-storm">{subtitle}</p>
+        <p className="mt-6 roboto mb-16 text-md text-primary-storm max-w-[720px]">
+          {subtitle}
+        </p>
       )}
       {children}
     </section>
