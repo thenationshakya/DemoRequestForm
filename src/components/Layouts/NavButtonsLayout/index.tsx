@@ -1,11 +1,11 @@
 // components
-import Button from "../../Button";
+import Button from "components/Button";
 
 // types
 import { NavButtonsLayoutProps } from "./types";
 
 // context
-import { usePageState } from "../../../context/pages.context";
+import { usePageState } from "context/pages.context";
 
 const NavButtonsLayout = ({ continueDisabled }: NavButtonsLayoutProps) => {
   const { setPage } = usePageState();

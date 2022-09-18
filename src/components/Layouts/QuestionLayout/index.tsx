@@ -2,7 +2,7 @@
 import { QuestionLayoutProps } from "./types";
 
 // context
-import { usePageState } from "../../../context/pages.context";
+import { usePageState } from "context/pages.context";
 
 const QuestionLayout = ({
   children,

@@ -1,10 +1,10 @@
 // components
-import Button from "../../components/Button";
-import SpinLoader from "../../components/SpinLoader";
+import Button from "components/Button";
+import SpinLoader from "components/SpinLoader";
 
 // hooks
-import useFetch from "../../hooks/useFetch";
-import { usePageState } from "../../context/pages.context";
+import useFetch from "hooks/useFetch";
+import { usePageState } from "context/pages.context";
 
 const InitialPage = () => {
   const { setPage } = usePageState();

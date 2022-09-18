@@ -1,9 +1,9 @@
 // components
-import Button from "../../components/Button";
-import { QuestionLayout } from "../../components/Layouts";
+import Button from "components/Button";
+import { QuestionLayout } from "components/Layouts";
 
 // context
-import { usePageState } from "../../context/pages.context";
+import { usePageState } from "context/pages.context";
 
 const ContactEmail = () => {
   const { setPage } = usePageState();

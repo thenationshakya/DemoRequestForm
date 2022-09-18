@@ -1,5 +1,5 @@
 // components
-import { NavButtonsLayout, QuestionLayout } from "../../components/Layouts";
+import { NavButtonsLayout, QuestionLayout } from "components/Layouts";
 
 const MonthlySessions = () => {
   return (

@@ -1,5 +1,5 @@
 // context
-import { usePageState } from "../../../context/pages.context";
+import { usePageState } from "context/pages.context";
 
 // types
 import { MainLayoutProps } from "./types";
