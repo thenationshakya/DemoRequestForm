@@ -26,9 +26,12 @@ const Analytics = () => {
         {response?.options.map((option, i) => (
           <Card
             key={i}
+            label={option.value}
             value={option?.value}
             logo={`analytic-tools/${option.src}`}
             textStyles={"text-lg max-w-4 font-semibold"}
+            type={"checkbox"}
+            name="analytics"
           />
         ))}
       </div>

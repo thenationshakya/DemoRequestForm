@@ -1,7 +1,9 @@
 export type CardProps = {
-  isSelected?: boolean;
-  children?: React.ReactNode;
+  id?: string;
+  type: "radio" | "checkbox";
+  label?: string;
   value?: string;
   logo?: string;
   textStyles?: string;
+  name?: string;
 };

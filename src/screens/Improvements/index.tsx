@@ -27,6 +27,7 @@ const Improvements = () => {
         {response?.options.map((option, i) => (
           <CheckBox
             value={option.value}
+            name="improvements"
             isChecked={true}
             key={i}
             handleOnChange={() => console.log("check")}

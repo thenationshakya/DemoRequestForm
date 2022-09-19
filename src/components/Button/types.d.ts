@@ -3,5 +3,7 @@ export type ButtonProps = {
   containerStyle?: string;
   buttonType?: "solid" | "outline";
   disabled?: boolean;
-  onClick: () => void;
+  isSubmit?: boolean;
+  onClick?: (e?: React.MouseEvent) => void;
+  formId?: string;
 };

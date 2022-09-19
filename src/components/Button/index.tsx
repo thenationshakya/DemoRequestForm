@@ -7,11 +7,13 @@ const Button = ({
   containerStyle,
   disabled,
   onClick,
+  isSubmit,
 }: ButtonProps) => {
   return (
     <button
+      type={isSubmit ? "submit" : "button"}
       disabled={disabled}
-      onClick={onClick}
+      onClick={(e) => onClick && onClick(e)}
       className={`${
         buttonType === "outline"
           ? "bg-transparent text-primary-sky border-2 border-primary-sky hover:text-primary-midnight hover:border-primary-midnight"

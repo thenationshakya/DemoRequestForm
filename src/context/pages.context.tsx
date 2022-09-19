@@ -1,6 +1,6 @@
-import { createContext, useContext } from "react";
+import { createContext, useContext, useState } from "react";
 
-export const PageContext = createContext<{
+const PageContext = createContext<{
   page: number;
   setPage: React.Dispatch<React.SetStateAction<number>>;
 }>({
@@ -8,10 +8,18 @@ export const PageContext = createContext<{
   setPage: null as unknown as React.Dispatch<React.SetStateAction<number>>,
 });
 
-export function usePageState() {
-  const context = useContext(PageContext);
-  if (context === undefined) {
-    throw new Error("usePageState must be used within a PageContext.Provider");
-  }
-  return context;
-}
+export const PageDataProvider = ({
+  children,
+}: {
+  children: React.ReactNode;
+}) => {
+  const [page, setPage] = useState(0);
+
+  return (
+    <PageContext.Provider value={{ page, setPage }}>
+      {children}
+    </PageContext.Provider>
+  );
+};
+
+export const usePageState = () => useContext(PageContext);

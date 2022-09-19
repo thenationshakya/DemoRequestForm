@@ -27,8 +27,11 @@ const Framework = () => {
           <Card
             key={i}
             value={option?.value}
+            label={option.value}
             logo={`framework/${option.src}`}
             textStyles={"text-lg max-w-4 font-semibold"}
+            type="radio"
+            name="framework"
           />
         ))}
       </div>

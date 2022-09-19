@@ -27,9 +27,14 @@ const MonthlySessions = () => {
     >
       <div className="grid w-full grid-cols-3 gap-x-12 gap-y-9">
         {response?.options.map((option, i) => (
-          <Card key={i}>
-            <h3 className="font-semibold text-xxxl">{option.value}</h3>
-          </Card>
+          <Card
+            label={option.value}
+            key={i}
+            type="radio"
+            name="session"
+            value={option.value}
+            textStyles={"text-xxxl"}
+          />
         ))}
       </div>
       <NavButtonsLayout />

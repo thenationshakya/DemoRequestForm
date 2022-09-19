@@ -1,5 +1,6 @@
 export type CheckBoxProps = {
   value: string;
-  isChecked: boolean;
-  handleOnChange: () => void;
+  name: string;
+  isChecked?: boolean;
+  handleOnChange?: () => void;
 };

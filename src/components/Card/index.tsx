@@ -1,24 +1,40 @@
 // type
 import { CardProps } from "./types";
 
-const Card = ({ children, isSelected, logo, value, textStyles }: CardProps) => {
+const Card = ({
+  id,
+  logo,
+  value,
+  textStyles,
+  type,
+  name,
+  label,
+}: CardProps) => {
   return (
-    <div
-      className={`w-full bg-white py-7 px-9 gap-4 items-center cursor-pointer flex ${
-        isSelected && "border-2 border-primary-sky"
-      }`}
-    >
-      {logo && (
-        <img
-          src={require(`assets/${logo}`)}
-          alt={value}
-          className="object-contain w-[50px] h-16"
-        />
-      )}
-      {value && (
-        <h3 className={`text-xl font-semibold ${textStyles}`}>{value}</h3>
-      )}
-      {children}
+    <div>
+      <input
+        type={type}
+        className="hidden peer"
+        name={name}
+        id={id}
+        value={value}
+      />
+      <label
+        htmlFor={id}
+        className={`w-full bg-white py-7 px-9  cursor-pointer flex items-center gap-4
+        border-2 border-transparent peer-checked:border-primary-sky`}
+      >
+        {logo && (
+          <img
+            src={require(`assets/${logo}`)}
+            alt={label}
+            className="object-contain w-[50px] h-16"
+          />
+        )}
+        {label && (
+          <h3 className={`text-xl font-semibold ${textStyles}`}>{label}</h3>
+        )}
+      </label>
     </div>
   );
 };

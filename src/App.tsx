@@ -1,5 +1,3 @@
-import { useState } from "react";
-
 // styles
 import "./styles/App.scss";
 
@@ -20,12 +18,13 @@ import MonthlySessions from "./screens/MonthlySessions";
 import SurveyCompletion from "./screens/SurveyCompletion";
 
 // context
-import { PageContext } from "./context/pages.context";
+import { FormDataProvider } from "context/formData.context";
+import { PageDataProvider, usePageState } from "./context/pages.context";
 
 function App() {
-  const [page, setPage] = useState(0);
-
   const ScreenRender = () => {
+    const { page } = usePageState();
+
     switch (page) {
       case 0:
         return <InitialPage />;
@@ -60,11 +59,13 @@ function App() {
   };
 
   return (
-    <PageContext.Provider value={{ page, setPage }}>
-      <MainLayout>
-        <ScreenRender />
-      </MainLayout>
-    </PageContext.Provider>
+    <PageDataProvider>
+      <FormDataProvider>
+        <MainLayout>
+          <ScreenRender />
+        </MainLayout>
+      </FormDataProvider>
+    </PageDataProvider>
   );
 }
 

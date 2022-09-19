@@ -27,8 +27,11 @@ const OperatingSystem = () => {
         {response?.options.map((option, i) => (
           <Card
             key={i}
-            value={option?.value}
+            label={option.value}
             logo={`mobile-os/${option.src}`}
+            type={"radio"}
+            name={"os"}
+            id={option.id}
           />
         ))}
       </div>

@@ -19,9 +19,12 @@ const NavButtonsLayout = ({ continueDisabled }: NavButtonsLayoutProps) => {
         containerStyle={"text-xs"}
       />
       <Button
+        isSubmit
         buttonText="Continue"
         buttonType="solid"
-        onClick={() => setPage((page) => page + 1)}
+        onClick={(e) => {
+          setPage((page) => page + 1);
+        }}
         containerStyle={"text-xs"}
         disabled={continueDisabled}
       />
