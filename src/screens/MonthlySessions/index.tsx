@@ -57,7 +57,7 @@ const MonthlySessions = () => {
       titleStyles={"max-w-[550px]"}
     >
       <form className="w-full" onSubmit={handleSubmit(onSubmit)}>
-        <div className="grid w-full grid-cols-3 gap-x-12 gap-y-9">
+        <div className="grid w-full grid-cols-1 gap-4 xs:grid-cols-3 sm:gap-8 md:gap-12">
           {response?.options.map((option, i) => (
             <Card
               register={register}
@@ -65,7 +65,7 @@ const MonthlySessions = () => {
               key={i}
               type="radio"
               name="session"
-              textStyles={"text-xxxl"}
+              textStyles={"lg:text-xxxl"}
               id={option.id}
             />
           ))}

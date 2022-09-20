@@ -8,7 +8,11 @@ const MainLayout = ({ children }: MainLayoutProps) => {
   const { page } = usePageState();
 
   return (
-    <main className={"bg-primary-cloud min-h-screen py-[180px] relative"}>
+    <main
+      className={
+        "bg-primary-cloud min-h-screen py-20 md:py-24 lg:py-[180px] relative"
+      }
+    >
       <div
         className={`absolute top-0 left-0 h-3 bg-primary-sky transition-all`}
         style={{ width: `${(100 / 8) * page}%` }}

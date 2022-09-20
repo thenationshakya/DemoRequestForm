@@ -53,7 +53,7 @@ const OperatingSystem = () => {
   return (
     <QuestionLayout title={response?.title}>
       <form className="w-full" onSubmit={handleSubmit(onSubmit)}>
-        <div className="grid w-3/4 grid-cols-2 gap-12 mt-16 mx-auto">
+        <div className="grid w-full grid-cols-2 gap-2 mx-auto mt-16 sm:gap-8 md:w-3/4 md:gap-12">
           {response?.options.map((option, i) => (
             <Card
               register={register}

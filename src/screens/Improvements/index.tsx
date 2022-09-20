@@ -50,8 +50,8 @@ const Improvements = () => {
 
   return (
     <QuestionLayout title={response?.title} subtitle={response?.subtitle}>
-      <form className="w-full" onSubmit={handleSubmit(onSubmit)}>
-        <div className="grid grid-cols-2 gap-x-16 gap-y-6">
+      <form className="w-full max-w-[715px]" onSubmit={handleSubmit(onSubmit)}>
+        <div className="grid xs:grid-cols-2 gap-x-16 gap-y-6">
           {response?.options.map((option, i) => (
             <CheckBox
               id={option.id}

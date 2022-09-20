@@ -22,18 +22,20 @@ const Card = ({
       />
       <label
         htmlFor={id}
-        className={`w-full bg-white py-7 px-9  cursor-pointer flex items-center gap-4
+        className={`w-full bg-white py-5 px-6 md:py-7 md:px-9 cursor-pointer flex items-center gap-4
         border-2 border-transparent peer-checked:border-primary-sky`}
       >
         {logo && (
           <img
             src={require(`assets/${logo}`)}
             alt={label}
-            className="object-contain w-[50px] h-16"
+            className="object-contain w-8 h-10  md:w-[50px] md:h-16"
           />
         )}
         {label && (
-          <h3 className={`text-xl font-semibold ${textStyles}`}>{label}</h3>
+          <h3 className={`text-md md:text-lg font-semibold ${textStyles}`}>
+            {label}
+          </h3>
         )}
       </label>
     </div>

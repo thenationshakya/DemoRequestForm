@@ -52,7 +52,7 @@ const Framework = () => {
   return (
     <QuestionLayout title={response?.title} titleStyles={"max-w-[460px]"}>
       <form className="w-full" onSubmit={handleSubmit(onSubmit)}>
-        <div className="grid w-full grid-cols-3 mt-16 gap-x-12 gap-y-9">
+        <div className="grid w-full grid-cols-1 gap-2 mt-16 lg:grid-cols-3 sm:grid-cols-2 sm:gap-8 md:gap-x-12 md:gap-y-9">
           {response?.options.map((option, i) => (
             <Card
               register={register}
