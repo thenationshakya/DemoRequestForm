@@ -5,6 +5,7 @@ export type AnaltyicsResponse = {
 };
 
 export type OptionType = {
+  id: string;
   value: string;
   src: string;
 };

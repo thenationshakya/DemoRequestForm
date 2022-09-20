@@ -1,25 +1,37 @@
 // packages
 import { useForm } from "react-hook-form";
+import { yupResolver } from "@hookform/resolvers/yup";
 
 // components
 import Card from "components/Card";
 import SpinLoader from "components/SpinLoader";
+import ErrorMessage from "components/ErrorMessage";
 import { NavButtonsLayout, QuestionLayout } from "components/Layouts";
 
 // hooks
 import useFetch from "hooks/useFetch";
-
-// typess
-import { AnaltyicsResponse } from "./types";
 import { usePageState } from "context/pages.context";
+import { useFormData } from "context/formData.context";
+
+// types
+import { AnaltyicsResponse } from "./types";
+
+// validations
+import { AnalyticsValidationSchema } from "global/validations";
 
 const Analytics = () => {
   const { response, isLoading, error } =
     useFetch<AnaltyicsResponse>("analytics");
-  const { handleSubmit, register } = useForm({
+  const { formData, setValues } = useFormData();
+  const {
+    handleSubmit,
+    register,
+    formState: { errors },
+  } = useForm({
     defaultValues: {
-      analytics: [""],
+      analytics: formData.analytics,
     },
+    resolver: yupResolver(AnalyticsValidationSchema),
   });
 
   const { setPage } = usePageState();
@@ -32,8 +44,10 @@ const Analytics = () => {
     return <SpinLoader />;
   }
 
-  const onSubmit = () => {
-    console.log("analytics");
+  const onSubmit = (e: { analytics: string[] }) => {
+    setValues({
+      analytics: e.analytics,
+    });
     setPage((page) => page + 1);
   };
 
@@ -43,6 +57,7 @@ const Analytics = () => {
         <div className="grid w-full grid-cols-3 gap-x-12 gap-y-9">
           {response?.options.map((option, i) => (
             <Card
+              id={option.id}
               register={register}
               key={i}
               label={option.value}
@@ -53,6 +68,9 @@ const Analytics = () => {
             />
           ))}
         </div>
+        {errors.analytics?.message && (
+          <ErrorMessage errorMessage={errors.analytics.message} />
+        )}
         <NavButtonsLayout />
       </form>
     </QuestionLayout>

@@ -3,62 +3,77 @@
   "subtitle": "Please select all that apply",
   "options": [
     {
+      "id": "google",
       "value": "Google Analytics",
       "src": "google-analytics.png"
     },
     {
+      "id": "firebase",
       "value": "Firebase",
       "src": "firebase.png"
     },
     {
+      "id": "adobe",
       "value": "Adobe",
       "src": "adobe.png"
     },
     {
+      "id": "mixpanel",
       "value": "Mixpanel",
       "src": "mixpanel.png"
     },
     {
+      "id": "amplitude",
       "value": "Amplitude",
       "src": "amplitude.png"
     },
     {
+      "id": "clevertap",
       "value": "Clever Tap",
       "src": "clevertap.webp"
     },
     {
+      "id": "segment",
       "value": "Segment",
       "src": "segment.png"
     },
     {
+      "id": "instabug",
       "value": "Instabug",
       "src": "instabug.png"
     },
     {
+      "id": "appsflyer",
       "value": "Appsflyer",
       "src": "appsflyer.png"
     },
     {
+      "id": "branch",
       "value": "Branch",
       "src": "branch.png"
     },
     {
+      "id": "adjust",
       "value": "Adjust",
       "src": "adjust.png"
     },
     {
+      "id": "sentry",
       "value": "Sentry",
       "src": "sentry.png"
     },
     {
+      "id": "flurry",
       "value": "Flurry",
       "src": "flurry.png"
     },
     {
+      "id": "others",
       "value": "Others",
       "src": "others.png"
     },
     {
+      "id": "noanalytics",
       "value": "No Analytics",
       "src": "no-analytics.png"
     }

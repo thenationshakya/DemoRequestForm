@@ -15,3 +15,11 @@ export const FrameworkValidationSchema = yup.object().shape({
 export const SessionsValidationSchema = yup.object().shape({
   session: yup.string().required("Session is required"),
 });
+
+export const AnalyticsValidationSchema = yup.object().shape({
+  analytics: yup.array().of(yup.string()).min(1),
+});
+
+export const ImprovementsValidationSchema = yup.object().shape({
+  improvements: yup.array().of(yup.string()).min(1),
+});

@@ -1,15 +1,5 @@
 import { createContext, useContext, useState } from "react";
 
-const formInitialData = {
-  os: "",
-  framework: "",
-  sessions: "",
-  analytics: [""],
-  app_link: "",
-  improvements: [""],
-  contact: "",
-};
-
 export type FormDataType = {
   os: string;
   framework: string;
@@ -18,6 +8,16 @@ export type FormDataType = {
   app_link: string;
   improvements: string[];
   contact: string;
+};
+
+const formInitialData: FormDataType = {
+  os: "",
+  framework: "",
+  sessions: "",
+  analytics: [],
+  app_link: "",
+  improvements: [],
+  contact: "",
 };
 
 const FormDataContext = createContext<{

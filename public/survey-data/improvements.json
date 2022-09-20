@@ -3,36 +3,47 @@
   "subtitle": "Please select all that apply",
   "options": [
     {
+      "id": "1",
       "value": "Improve overall UX"
     },
     {
+      "id": "2",
       "value": "Increase feature adoption"
     },
     {
+      "id": "3",
       "value": "Increase app retention"
     },
     {
+      "id": "4",
       "value": "Improve onboarding experience"
     },
     {
+      "id": "5",
       "value": "Increase key conversions"
     },
     {
+      "id": "6",
       "value": "Understand in-app user journeys"
     },
     {
+      "id": "7",
       "value": "Improve app store rating & NPS"
     },
     {
+      "id": "8",
       "value": "Incorporate UX feedback into product research and development"
     },
     {
+      "id": "9",
       "value": "Support Customer Success and Engineering teams in resolving bugs & crashes"
     },
     {
+      "id": "10",
       "value": "Other (please specify at the bottom of the form)"
     },
     {
+      "id": "11",
       "value": "Capture qualitative insights and understand why users drop-off"
     }
   ]

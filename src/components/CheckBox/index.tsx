@@ -1,17 +1,18 @@
 import { CheckBoxProps } from "./types";
 
-const CheckBox = ({ value, name, register }: CheckBoxProps) => {
+const CheckBox = ({ id, label, name, register }: CheckBoxProps) => {
   return (
     <div className="flex items-start gap-x-6 max-w-[329px]">
       <input
         type="checkbox"
-        id={value}
+        id={id}
         name={name}
+        value={label}
         {...register(name)}
         className="checked:bg-primary-sky checked:bg-none "
       />
-      <label htmlFor={value} className="-mt-1 text-left">
-        {value}
+      <label htmlFor={id} className="-mt-1 text-left">
+        {label}
       </label>
     </div>
   );
