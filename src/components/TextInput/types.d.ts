@@ -6,7 +6,6 @@ export type TextInputProps = {
   register: UseFormRegister;
   placeholder?: string;
   inputStyles?: string;
-  // value?: string;
   type?: HTMLInputTypeAttribute;
   errorMessage?: string;
 };

@@ -1,8 +1,11 @@
+// packages
 import { useForm } from "react-hook-form";
+import { yupResolver } from "@hookform/resolvers/yup";
 
 // components
 import Card from "components/Card";
 import SpinLoader from "components/SpinLoader";
+import ErrorMessage from "components/ErrorMessage";
 import { NavButtonsLayout, QuestionLayout } from "components/Layouts";
 
 // hooks
@@ -13,6 +16,9 @@ import { useFormData } from "context/formData.context";
 // types
 import { OperatingSystemResponse } from "./types";
 
+// global
+import { OsValidationSchema } from "global/validations";
+
 const OperatingSystem = () => {
   const { response, error, isLoading } =
     useFetch<OperatingSystemResponse>("operating-system");
@@ -20,10 +26,15 @@ const OperatingSystem = () => {
   const { setPage } = usePageState();
   const { formData, setValues } = useFormData();
 
-  const { handleSubmit, register } = useForm({
+  const {
+    handleSubmit,
+    register,
+    formState: { errors },
+  } = useForm({
     defaultValues: {
       os: formData.os,
     },
+    resolver: yupResolver(OsValidationSchema),
   });
 
   if (error) {
@@ -55,6 +66,9 @@ const OperatingSystem = () => {
             />
           ))}
         </div>
+        {errors.os?.message && (
+          <ErrorMessage errorMessage={errors.os.message} />
+        )}
         <NavButtonsLayout />
       </form>
     </QuestionLayout>
