@@ -18,7 +18,7 @@ const SurveyCompletion = () => {
 
   useEffect(() => {
     console.log(JSON.stringify(formData, null, 2));
-  });
+  }, []);
 
   if (error) {
     return <p>Error while fetching data. Please try again later.</p>;
