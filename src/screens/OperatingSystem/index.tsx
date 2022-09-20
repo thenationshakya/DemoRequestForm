@@ -7,20 +7,22 @@ import { NavButtonsLayout, QuestionLayout } from "components/Layouts";
 
 // hooks
 import useFetch from "hooks/useFetch";
+import { usePageState } from "context/pages.context";
+import { useFormData } from "context/formData.context";
 
 // types
 import { OperatingSystemResponse } from "./types";
-import { usePageState } from "context/pages.context";
 
 const OperatingSystem = () => {
   const { response, error, isLoading } =
     useFetch<OperatingSystemResponse>("operating-system");
 
   const { setPage } = usePageState();
+  const { formData, setValues } = useFormData();
 
   const { handleSubmit, register } = useForm({
     defaultValues: {
-      os: "ios",
+      os: formData.os,
     },
   });
 
@@ -32,7 +34,8 @@ const OperatingSystem = () => {
     return <SpinLoader />;
   }
 
-  const onSubmit = () => {
+  const onSubmit = (e: { os: string }) => {
+    setValues({ os: e.os });
     setPage((page) => page + 1);
   };
 

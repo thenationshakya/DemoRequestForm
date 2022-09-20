@@ -18,7 +18,7 @@ const Card = ({
         className="hidden peer"
         name={name}
         id={id}
-        value={value}
+        value={label}
         {...register(name)}
       />
       <label
