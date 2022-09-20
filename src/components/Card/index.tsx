@@ -9,6 +9,7 @@ const Card = ({
   type,
   name,
   label,
+  register,
 }: CardProps) => {
   return (
     <div>
@@ -18,6 +19,7 @@ const Card = ({
         name={name}
         id={id}
         value={value}
+        {...register(name)}
       />
       <label
         htmlFor={id}

@@ -2,10 +2,9 @@
 import { useForm } from "react-hook-form";
 
 // components
-import Button from "components/Button";
 import TextInput from "components/TextInput";
 import SpinLoader from "components/SpinLoader";
-import { QuestionLayout } from "components/Layouts";
+import { NavButtonsLayout, QuestionLayout } from "components/Layouts";
 
 // hooks
 import useFetch from "hooks/useFetch";
@@ -49,16 +48,7 @@ const AppLinks = () => {
           name="app_link"
           placeholder={response?.input.placeholder}
         />
-        <div className="flex justify-between gap-2 w-full max-w-[690px] mx-auto mt-[50px]">
-          <Button
-            buttonText="Back"
-            buttonType="outline"
-            onClick={() => setPage((page) => page - 1)}
-            isSubmit
-            containerStyle={"text-xs"}
-          />
-          <Button buttonText="Continue" isSubmit containerStyle={"text-xs"} />
-        </div>
+        <NavButtonsLayout />
       </form>
     </QuestionLayout>
   );
