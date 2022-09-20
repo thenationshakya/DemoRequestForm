@@ -3,12 +3,15 @@
   "subtitle": "A session is every time a user opens the app, uses it, and when they put the app into the background, the session ends.",
   "options": [
     {
+      "id": "1",
       "value": "01 - 49"
     },
     {
+      "id": "2",
       "value": "50 - 100"
     },
     {
+      "id": "3",
       "value": "101 - 200"
     }
   ]

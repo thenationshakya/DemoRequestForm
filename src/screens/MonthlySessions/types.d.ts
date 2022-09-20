@@ -5,5 +5,6 @@ export type SessionResponse = {
 };
 
 export type OptionType = {
+  id: string;
   value: string;
 };

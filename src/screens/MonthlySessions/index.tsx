@@ -1,19 +1,39 @@
+// packages
+import { useForm } from "react-hook-form";
+import { yupResolver } from "@hookform/resolvers/yup";
+
 // components
+import Card from "components/Card";
 import SpinLoader from "components/SpinLoader";
+import ErrorMessage from "components/ErrorMessage";
 import { NavButtonsLayout, QuestionLayout } from "components/Layouts";
 
 // hooks
 import useFetch from "hooks/useFetch";
+import { usePageState } from "context/pages.context";
+import { useFormData } from "context/formData.context";
 
 // types
 import { SessionResponse } from "./types";
-import Card from "components/Card";
-import { useForm } from "react-hook-form";
-import { usePageState } from "context/pages.context";
+
+// global
+import { SessionsValidationSchema } from "global/validations";
 
 const MonthlySessions = () => {
   const { response, isLoading, error } = useFetch<SessionResponse>("sessions");
-  const { register, handleSubmit } = useForm();
+
+  const { formData, setValues } = useFormData();
+
+  const {
+    register,
+    handleSubmit,
+    formState: { errors },
+  } = useForm({
+    defaultValues: {
+      session: formData.sessions,
+    },
+    resolver: yupResolver(SessionsValidationSchema),
+  });
   const { setPage } = usePageState();
 
   if (error) {
@@ -24,8 +44,11 @@ const MonthlySessions = () => {
     return <SpinLoader />;
   }
 
-  const onSubmit = () => {
+  const onSubmit = (e: { session: string }) => {
     setPage((page) => page + 1);
+    setValues({
+      sessions: e.session,
+    });
   };
   return (
     <QuestionLayout
@@ -42,11 +65,14 @@ const MonthlySessions = () => {
               key={i}
               type="radio"
               name="session"
-              value={option.value}
               textStyles={"text-xxxl"}
+              id={option.id}
             />
           ))}
         </div>
+        {errors.session?.message && (
+          <ErrorMessage errorMessage={errors.session.message} />
+        )}
         <NavButtonsLayout />
       </form>
     </QuestionLayout>

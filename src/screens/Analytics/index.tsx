@@ -46,7 +46,6 @@ const Analytics = () => {
               register={register}
               key={i}
               label={option.value}
-              value={option?.value}
               logo={`analytic-tools/${option.src}`}
               textStyles={"text-lg max-w-4 font-semibold"}
               type={"checkbox"}

@@ -2,50 +2,62 @@
   "title": "What framework is your app developed on?",
   "options": [
     {
+      "id": "ios",
       "value": "iOS",
       "src": "apple.png"
     },
     {
+      "id": "android",
       "value": "Android",
       "src": "android.png"
     },
     {
+      "id": "ionic",
       "value": "Ionic",
       "src": "ionic.png"
     },
     {
+      "id": "cordova",
       "value": "Cordova",
       "src": "cordova.png"
     },
     {
+      "id": "flutter",
       "value": "Flutter",
       "src": "flutter.png"
     },
     {
+      "id": "unity",
       "value": "Unity",
       "src": "unity.png"
     },
     {
+      "id": "reactnative",
       "value": "React Native",
       "src": "react-native.png"
     },
     {
+      "id": "xamarin",
       "value": "Xamarin",
       "src": "xamarin.png"
     },
     {
+      "id": "xamarinforms",
       "value": "Xamarin.forms",
       "src": "xamarin.png"
     },
     {
+      "id": "expo",
       "value": "Expo",
       "src": "apple.png"
     },
     {
+      "id": "nativescript",
       "value": "NativeScript",
       "src": "nativescript.png"
     },
     {
+      "id": "other",
       "value": "Other",
       "src": "android.png"
     }

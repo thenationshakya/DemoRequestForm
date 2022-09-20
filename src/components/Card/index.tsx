@@ -4,7 +4,6 @@ import { CardProps } from "./types";
 const Card = ({
   id,
   logo,
-  value,
   textStyles,
   type,
   name,
