@@ -1,21 +1,23 @@
 // packages
 import { useForm } from "react-hook-form";
+import { yupResolver } from "@hookform/resolvers/yup";
 
 // components
 import CheckBox from "components/CheckBox";
 import SpinLoader from "components/SpinLoader";
+import ErrorMessage from "components/ErrorMessage";
 import { NavButtonsLayout, QuestionLayout } from "components/Layouts";
 
 // hooks
 import useFetch from "hooks/useFetch";
 import { usePageState } from "context/pages.context";
+import { useFormData } from "context/formData.context";
 
 // types
 import { ImprovementResponse } from "./types";
-import { useFormData } from "context/formData.context";
-import { yupResolver } from "@hookform/resolvers/yup";
+
+// globals
 import { ImprovementsValidationSchema } from "global/validations";
-import ErrorMessage from "components/ErrorMessage";
 
 const Improvements = () => {
   const { response, isLoading, error } =
